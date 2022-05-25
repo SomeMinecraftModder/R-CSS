@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Fira+Sans&display=swap');
+
+:root {
+    --default-margin: .5rem;
+    --column-padding: .5rem;
+    --bg-color: rgb(34, 34, 34);
+    --default-text-color: rgb(240, 240, 240);
+    --btn-color: #5648;
+    --btn-primary-color: #CDCDEF;
+    --backround-color: aliceblue;
+    --border-color: #a01bff;
+    --border-color-saturated: #ff00f7;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+div,
+img,
+footer,
+header,
+article {
+    box-sizing: content-box;
+}
+
+img,
+picture {
+    display: block;
+    width: 100%;
+}
+
+:focus {
+    outline: none;
+}
+  
+::-moz-focus-inner {
+    border: 0;
+}
+
+@keyframes TitleEnt {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes BntClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+p,
+section,
+div,
+span,
+code,
+kbd,
+a,
+button,
+input[type=submit] {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--default-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--default-text-color);
+    margin: var(--default-margin) auto;
+    padding: var(--default-margin) 0;
+}
+
+h1,
+.hero-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    text-rendering: optimizeLegibility;
+}
+
+.btn,
+input[type="submit"] {
+    border: none;
+    font-size: medium;
+    background-color: #CDCDEF;
+    color: black;
+    margin: .1rem;
+    padding: var(--default-margin);
+    border-radius: var(--default-margin);
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.is-primary {
+    background-color: #4d4dff;
+    color: var(--text-color);
+}
+
+.btn:active,
+input[type="submit"]:active {
+    animation: BntClick 0.5s ease 0s 1 normal forwards;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.center-div {
+    margin: 0 50%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.debug {
+    border: solid red;
+}
+
+.debug-2 {
+    background-color: red;
+}
+
+.cols {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+}
+
+.cols .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: var(--column-padding);
+}
+
+.cols .col-min {
+    flex: none;
+    width: min-content;
+}
+
+.cols .col-0 {
+    flex: none;
+    width: 5%;
+}
+
+.cols .col-1 {
+    flex: none;
+    width: 10%;
+}
+
+.cols .col-2 {
+    flex: none;
+    width: 15%;
+}
+
+.cols .col-3 {
+    flex: none;
+    width: 20%;
+}
+
+.cols .col-4 {
+    flex: none;
+    width: 25%;
+}
+
+.cols .col-5 {
+    flex: none;
+    width: 30%;
+}
+
+.cols .col-6 {
+    flex: none;
+    width: 35%;
+}
+
+.cols .col-7 {
+    flex: none;
+    width: 40%;
+}
+
+.cols .col-8 {
+    flex: none;
+    width: 45%;
+}
+
+@media (max-width:50rem)  {
+    .cols {
+        flex-direction: column;
+        row-gap: .5rem;
+    }
+}
+
+.hero {
+    background-color: var(--backround-color);
+    padding: 2rem 5rem;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    width: auto;
+}
+
+.hero span {
+    color: black;
+    display: block;
+}
+
+.hero .hero-subtitle {
+    font-size: 1.5rem;
+    animation: TitleEnt 1.2s ease 0s 1 normal forwards;
+}
+
+.hero .hero-title {
+    animation: TitleEnt 1s ease 0s 1 normal forwards;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav div {
+    margin: 0 1rem;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 var(--default-margin);
+}
+
+kbd {
+    background-color: var(--backround-color);
+    color: black;
+    border-radius: .2rem;
+    padding: .3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+textarea,
+input {
+    background-color: var(--bg-color);
+    color: rgb(240, 240, 240);
+    font-size: large;
+    border-radius: var(--default-margin);
+    border: var(--border-color) solid .1rem;
+    display: block;
+    margin: var(--default-margin) 0;
+    padding: var(--default-margin);
+}
+
+input:focus,
+textarea:focus {
+    border: var(--border-color-saturated) solid .2rem;
+}
+
+menu {
+    overflow: hidden;
+}
+
+menu li ul {
+    list-style: inside;
+    padding-left: 0;
+}
+
+menu li {
+    background-color: var(--backround-color);
+    color: black;
+    border-radius: .2rem;
+    padding: .3rem;
+    margin-bottom: var(--default-margin);
+}
