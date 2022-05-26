@@ -302,6 +302,7 @@ menu {
 menu li ul {
     list-style: inside;
     padding-left: 0;
+    padding-bottom: 0   ;
 }
 
 menu li {
@@ -310,4 +311,5 @@ menu li {
     border-radius: .2rem;
     padding: .3rem;
     margin-bottom: var(--default-margin);
+    width: auto;
 }
