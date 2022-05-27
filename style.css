@@ -8,6 +8,7 @@
     --btn-color: #5648;
     --btn-primary-color: #CDCDEF;
     --backround-color: aliceblue;
+    --unsatured-color-border: #9654c6;
     --border-color: #a01bff;
     --border-color-saturated: #ff00f7;
 }
@@ -140,7 +141,7 @@ input[type="submit"]:active {
     animation: BntClick 0.5s ease 0s 1 normal forwards;
 }
 
-.content {
+.content, section {
     padding: 1rem;
 }
 
@@ -226,7 +227,18 @@ input[type="submit"]:active {
 @media (max-width:50rem)  {
     .cols {
         flex-direction: column;
+        flex-flow: column wrap;
         row-gap: .5rem;
+    }
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7, 
+    .col-8 {
+        width: auto !important;
     }
 }
 
@@ -295,6 +307,28 @@ textarea:focus {
     border: var(--border-color-saturated) solid .2rem;
 }
 
+.fields {
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    border: var(--unsatured-color-border) solid .2rem;
+    border-radius: .5rem;
+    width: fit-content;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-right: var(--default-margin);
+}
+
+.form-group label:not(:first-child) {
+    margin: 0 var(--default-margin);
+}
+
 menu {
     overflow: hidden;
 }
@@ -302,7 +336,7 @@ menu {
 menu li ul {
     list-style: inside;
     padding-left: 0;
-    padding-bottom: 0   ;
+    padding-bottom: 0;
 }
 
 menu li {
@@ -310,6 +344,13 @@ menu li {
     color: black;
     border-radius: .2rem;
     padding: .3rem;
-    margin-bottom: var(--default-margin);
     width: auto;
+}
+
+menu li .block:not(:last-child) {
+    margin-bottom: var(--default-margin);
+}
+
+menu .menu-label {
+    margin-bottom: 0;
 }

@@ -21,7 +21,7 @@
         <div class="cols">
         <div class="col col-1">
             <menu>
-                <li>A</li>
+                <p class="menu-label">a</p>
                 <li>
                     <ul>
                         <li>A</li>
@@ -29,7 +29,22 @@
                         <li>C</li>
                     </ul>
                 </li>
-                <li>CCCCCCCCCCCCCCCCCCCCCCCc</li>
+                <p class="menu-label">a</p>
+                <li>
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                    </ul>
+                </li>
+                <p class="menu-label">a</p>
+                <li>
+                    <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            </li>
             </menu>
         </div>
         <div class="col">
@@ -89,9 +104,18 @@
         <kbd>test</kbd>
         <p>do <kbd>Ctrl+n</kbd> for free hens</p>
         <form>
-            <input placeholder="test1" class="input">
-            <input placeholder="test2" class="input">
-            <div class=""></div>
+            <div class="fields">
+            <label for="1">Thing1</label>
+            <input placeholder="test1" class="input" name="1">
+            <label for="2">Thing1</label>
+            <input placeholder="test2" class="input" name="2">
+            </div>
+            <div class="fields form-group">
+                <label for="3">Thing1</label>
+                <input placeholder="test1" class="input" name="3">
+                <label for="4">Thing1</label>
+                <input placeholder="test2" class="input" name="4">
+            </div>
             <textarea placeholder="a"></textarea>
             <input type="submit">
         </form>
